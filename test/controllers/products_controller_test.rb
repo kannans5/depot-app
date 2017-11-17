@@ -6,17 +6,15 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     @update = {
       title:        'Lorem Ipsum',
       description:  'Rails is fun!',
-      image_url:    'lorem.jpg',
+      image_url:    'rails.png',
       price:        19.95
     }
   end
 
-  # test "should get index" do
-  #   get products_url
-  # #   s = get products_url
-  # # #   # puts "*************"
-  # # #   assert_response :success
-  # end
+  test "should get index" do
+    get products_url
+    assert_response :success
+  end
 
   test "should get new" do
     get new_product_url
